@@ -43,7 +43,7 @@ void loop()
   {
     connect();
   }
-  if (millis() - lastMillis > 2000)
+  if (millis() - lastMillis > 5000)
   {
     unsigned long endTime = bme.beginReading();
     if (endTime == 0)
@@ -60,7 +60,7 @@ void loop()
     float temp = bme.temperature;
     Serial.println(temp);
     StaticJsonDocument<100> doc;
-    doc["temp"] = temp;
+    doc["temperature"] = temp;
     serializeJson(doc, buffer);
     //publishTelemetry(mqttClient, "/sensors", getDefaultSensor());
     publishTelemetry(buffer);
