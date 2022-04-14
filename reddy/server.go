@@ -27,12 +27,12 @@ func pullMessages() {
 	log.Println("STARTED PULLING MESSAGES")
 ctx := context.Background()
 // Set your $PROJECT_ID
-	client, err := pubsub.NewClient(ctx, "websysiot")
+	client, err := pubsub.NewClient(ctx, "PROJECT ID")
 	if err != nil {
 		log.Fatal(err)
 	}
 // Set your $SUBSCRIPTION
-	subID := "myiotsubscription"
+	subID := "SUBSCRIOTION ID"
 	var mu sync.Mutex
 sub := client.Subscription(subID)
 	cctx, cancel := context.WithCancel(ctx)
