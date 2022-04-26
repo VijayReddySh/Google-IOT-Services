@@ -1,0 +1,7 @@
+Introduction :
+
+In this project, We use Google Cloud services like Cloud IOT Core, Pub/Sub, Google Cloud Run to track the live temperature using an ESP32 Microcontroller and BME680 temperature sensor.
+We use Arduino, VS Code (as code editor) with Platform IO extension to manage ESP32 & BME680 devices.
+We use Golang metric converter services to get messages from Pub/Sub service and post it to Prometheus.
+Prometheus acts as an input data source to Grafana.
+We use Grafana dashboard as user end interface.
